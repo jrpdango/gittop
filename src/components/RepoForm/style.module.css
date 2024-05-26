@@ -1,0 +1,33 @@
+.textfield-column {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 70%;
+    position: relative;
+}
+
+.generated-url {
+    width: 70%;
+    align-self: center;
+    margin-top: 56px;
+    position: relative;
+}
+
+.fill-form-text {
+    margin-top: 8px;
+    color: red;
+}
+
+.help,
+.help:visited {
+    color: lightskyblue;
+    font-size: 0.8em;
+    background-color: transparent;
+    border: none;
+    text-align: end;
+}
+
+.help:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 24px;
+}
+
+.back-button {
+    width: 100%;
+    margin-left: 40px;
+}
+
+.text {
+    margin-left: 24px;
+    margin-right: 40px;
+}
+
+.title {
+    color: var(--color-primary-500);
+    margin-top: 0;
+}
+
+.steps {
+    color: var(--color-primary-600);
+}

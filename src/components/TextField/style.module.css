@@ -1,0 +1,91 @@
+.textfield {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h4 {
+    margin: 4px;
+    color: var(--color-primary-600);
+}
+
+.field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary-500);
+    padding-left: 8px;
+}
+
+.field:disabled {
+    color: var(--color-surface-300);
+}
+
+.field-and-copy {
+    position: relative;
+    display: flex;
+    border-radius: 4px;
+    background-color: var(--color-primary-500);
+}
+
+.copy-image {
+    position: relative;
+    height: 25px;
+    width: 40px;
+    top: 2px;
+}
+
+.interactive {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+
+@keyframes change-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before {
+    position: absolute;
+    content: attr(data-hover-tooltip);
+    border: 1px solid var(--color-surface-100);
+    background: var(--color-surface-mixed-200);
+    color: var(--color-primary-500);
+    border-radius: 8px;
+    padding: .5em;
+    bottom: 36px;
+    right: -16px;
+    animation-name: change-opacity;
+    animation-duration: 0.2s;
+}
+
+[data-active-tooltip].active::before {
+    position: absolute;
+    content: attr(data-active-tooltip);
+    border: 1px solid var(--color-surface-100);
+    background: green;
+    color: var(--color-primary-500);
+    border-radius: 8px;
+    padding: .5em;
+    bottom: 36px;
+    right: -20px;
+    animation-name: change-opacity;
+    animation-duration: 0.2s;
+}

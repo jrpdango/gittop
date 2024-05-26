@@ -1,0 +1,61 @@
+:root {
+  /** CSS DARK THEME PRIMARY COLORS */
+  --color-primary-100: #e2b4bd;
+  --color-primary-200: #e5bcc4;
+  --color-primary-300: #e9c4cb;
+  --color-primary-400: #eccdd3;
+  --color-primary-500: #f0d5da;
+  --color-primary-600: #f3dde1;
+
+
+  /** CSS DARK THEME SURFACE COLORS */
+  --color-surface-100: #0b0014;
+  --color-surface-200: #231e29;
+  --color-surface-300: #3a3540;
+  --color-surface-400: #534e58;
+  --color-surface-500: #6d6972;
+  --color-surface-600: #88858c;
+
+  /** CSS DARK THEME MIXED SURFACE COLORS */
+  --color-surface-mixed-100: #1a1625;
+  --color-surface-mixed-200: #2f2b3a;
+  --color-surface-mixed-300: #46424f;
+  --color-surface-mixed-400: #5e5a66;
+  --color-surface-mixed-500: #76737e;
+  --color-surface-mixed-600: #908d96;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+html {
+  background-color: var(--color-surface-100);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* TODO: Check colors */
+a:link {
+  color: #76c7f9;
+}
+
+a:visited {
+  color: #7260e6;
+}
+
+.textfield-input::placeholder {
+  color: var(--color-surface-400);
+}
