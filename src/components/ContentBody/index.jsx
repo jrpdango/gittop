@@ -1,5 +1,5 @@
 import ContentTree from '../ContentTree';
-// import FilePreview from '@/components/FilePreview';
+import FilePreview from '../FilePreview';
 import { Octokit } from 'octokit';
 import MessageBlock from '../MessageBlock';
 import MarkdownParser from '../MarkdownParser';
@@ -54,6 +54,14 @@ export default function ContentBody({owner, repo, token, path, headerTitle}) {
                     }
                     // If response is a directory, we can just return it
                     setDisplayedElement(contentTree);
+                } else {
+                    // Otherwise, it's a file
+                    const { content, extension } = await requestGithubData({ owner, repo, token: decryptedToken, path });
+                    setDisplayedElement(
+                        <ContentContainer title={headerTitle} hasSmallerBottomPadding={true}>
+                            <FilePreview file={content} extension={extension} />
+                        </ContentContainer>
+                    );
                 }
             } catch(e) {
                 console.error(e);
@@ -69,15 +77,6 @@ export default function ContentBody({owner, repo, token, path, headerTitle}) {
     }, [path]);
 
     return(displayedElement);
-        // } else {
-        //     // Otherwise, it's a file
-        //     const { content, extension } = await requestGithubData({ owner, repo, token: decryptedToken, path });
-        //     return (
-        //         <ContentContainer title={headerTitle} hasSmallerBottomPadding={true}>
-        //             <FilePreview file={content} extension={extension} />
-        //         </ContentContainer>
-        //     );
-        // }
 }
 
 async function requestGithubData({ owner, repo, token, path }) {

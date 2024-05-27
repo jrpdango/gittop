@@ -1,5 +1,3 @@
-'use client';
-
 import { Link } from 'react-router-dom';
 import styles from './style.module.css';
 import StyledButton from '../StyledButton';

@@ -1,0 +1,42 @@
+.pdf-viewer {
+    min-height: 80vh;
+    border-radius: 0 0 16px 16px;
+}
+
+.pdf-fail {
+    color: var(--color-primary-600);
+}
+
+.switch-btn {
+    background-color: var(--color-surface-400);
+    color: var(--color-primary-600);
+    border-radius: 8px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-width: 0;
+}
+
+.switch-btn:hover {
+    cursor: pointer;
+}
+
+.switch-btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.switch-btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.switch-btn.active {
+    background-color: var(--color-surface-mixed-100);
+    border-width: 1px;
+    border-color: var(--color-primary-600);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+    color: #FFFFFF;
+}

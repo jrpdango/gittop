@@ -1,5 +1,3 @@
-'use client';
-
 import RepoItem from '../RepoItem';
 import { Link } from 'react-router-dom';
 
