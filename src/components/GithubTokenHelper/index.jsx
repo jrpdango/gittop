@@ -1,22 +1,22 @@
 import styles from "./style.module.css";
-// import StyledButton from "../StyledButton";
+import StyledButton from "../StyledButton";
 
 export default function GithubTokenHelper({onBack = () => {}}) {
     return (
         <>
             <div className={styles["back-button"]}>
-                {/* <StyledButton
+                <StyledButton
                     type="button"
                     title="Back"
                     leading={
                         <img
-                            src="/assets/up-arrow.svg"
+                            src="/up-arrow.svg"
                             alt="Left arrow icon"
                             style={{ height: '16px', width: '16px', transform: 'rotate(270deg)' }}
                         />
                     }
                     onClick={onBack}
-                /> */}
+                />
             </div>
             <div className={styles.body}>
 

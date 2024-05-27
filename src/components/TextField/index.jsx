@@ -93,7 +93,7 @@ export default function TextField({
                     }}>
 
                     <img
-                        src={pasteMode ? '/assets/paste-icon.svg' : '/assets/copy-icon.svg'}
+                        src={pasteMode ? '/paste-icon.svg' : '/copy-icon.svg'}
                         className={styles["copy-image"]}
                         alt="Copy"
                     />
