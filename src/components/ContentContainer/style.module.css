@@ -1,0 +1,6 @@
+.content-container {
+    border: solid var(--color-surface-400) thin;
+    border-radius: 16px;
+    margin: 8px 32px 16px 32px;
+    background-color: var(--color-surface-mixed-100);
+}

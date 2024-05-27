@@ -1,0 +1,32 @@
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin: 25vh auto 0 auto;
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.text {
+    color: var(--color-primary-600);
+    margin: 8px auto 25vh auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+}
