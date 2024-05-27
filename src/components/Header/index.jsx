@@ -40,7 +40,7 @@ export default function Header({subPaths, repo, isRoot}) {
                 className={ scrollOffset > 0 ? '' : 'hidden' }
                 leading={
                     <img 
-                        src="/assets/up-arrow.svg"
+                        src="/up-arrow.svg"
                         alt="Up arrow icon" 
                         style={{ height: '16px', width: '16px' }}
                     />

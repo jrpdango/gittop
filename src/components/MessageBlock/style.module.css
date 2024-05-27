@@ -1,0 +1,17 @@
+.msg-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+}
+
+.title {
+    color: var(--color-primary-600);
+    margin-top: 0;
+}
+
+.message {
+    color: var(--color-primary-400);
+    width: 80%;
+    text-align: center;
+}

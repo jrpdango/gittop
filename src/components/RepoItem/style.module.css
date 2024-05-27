@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+    border-top: solid var(--color-surface-400) thin;
+}
+
+.row:hover {
+    cursor: pointer;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+    place-self: center;
+    margin: 0 16px 0 16px;
+}
+
+.name {
+    color: var(--color-primary-600);
+}

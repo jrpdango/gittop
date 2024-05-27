@@ -1,0 +1,20 @@
+.md-parser {
+    margin: 24px;
+    color: var(--color-primary-600);
+}
+
+.md-parser img {
+    max-width: 100%;
+}
+
+.code-block {
+    border: solid var(--color-surface-400) thin;
+    border-radius: 8px;
+    margin: 8px 24px 0 24px;
+    background-color: var(--color-surface-100);
+    overflow-x: scroll;
+}
+
+.code-block pre {
+    margin: 24px;
+}

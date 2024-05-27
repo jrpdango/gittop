@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import Loading from '../../components/Loading';
 import ContentContainer from '../../components/ContentContainer';
 import Header from '../../components/Header';
+import ContentBody from '../../components/ContentBody';
 import { useSearchParams } from 'react-router-dom';
 
 export default function Display() {
@@ -18,15 +19,15 @@ export default function Display() {
     return (
         <div>
             <Header subPaths={subPaths} repo={repo} isRoot={isRoot} />
-            {/* <Suspense
+            <Suspense
                 key={path}
-                fallback={ */}
+                fallback={
                     <ContentContainer>
                         <Loading />
                     </ContentContainer>
-                {/* }>
+                }>
                 <ContentBody repo={repo} owner={owner} token={token} path={path} headerTitle={isRoot ? repo : subPaths.currentSegment} />
-            </Suspense> */}
+            </Suspense>
             {
                 extension === 'pdf' ?
                     <div className={styles["hard-refresh-help"]}>
@@ -47,7 +48,7 @@ function determineSubPaths({ owner, repo, token, path }) {
         return {
             currentSegment: '/',
             paths: [{
-                href: `display?repo=${repo}&owner=${owner}&token=${token}`,
+                href: `?repo=${repo}&owner=${owner}&token=${token}`,
                 segment: repo
             }]
         };
@@ -58,7 +59,7 @@ function determineSubPaths({ owner, repo, token, path }) {
         paths: segments.map((segment, index) => {
             const currentPath = (segments.slice(0, index + 1)).join('/');
             return {
-                href: `display?repo=${repo}&owner=${owner}&token=${token}&path=${currentPath}`,
+                href: `?repo=${repo}&owner=${owner}&token=${token}&path=${currentPath}`,
                 segment: segment ? segment : repo
             };
         })

@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "buffer": "^6.0.3",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^14.1.0",
+    "octokit": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
