@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import styles from './style.module.css';
 import TextField from '../../components/TextField';
-// import { encrypt } from '@/utils/tokenCrypto';
-// import StyledButton from '../StyledButton';
-import GithubTokenHelper from '../../components/GithubTokenHelper';
+import { encrypt } from '../../utils/tokenCrypto';
+import StyledButton from '../StyledButton';
+import GithubTokenHelper from '../GithubTokenHelper';
 
 export default function RepoForm() {
     const [currentUrl, setCurrentUrl] = useState('');
@@ -41,7 +41,7 @@ export default function RepoForm() {
                         onChange={text => setGithubToken(text)}
                     />
                 </form>
-                {/* <StyledButton
+                <StyledButton
                     type="button"
                     title="Generate URL"
                     onClick={async () => {
@@ -60,7 +60,7 @@ export default function RepoForm() {
                             setIsVisitButtonEnabled(false);
                         }
                     }}
-                /> */}
+                />
                 <div className={`${styles["fill-form-text"]} ${showFillFormText ? '' : 'hidden'}`}>Please fill all the above fields.</div>
                 <div className={styles["generated-url"]}>
                     <TextField
@@ -71,14 +71,14 @@ export default function RepoForm() {
                         buttonDisabled={!isVisitButtonEnabled}
                     />
                 </div>
-                {/* <div>
+                <div>
                     <StyledButton
                         type="link"
                         title="Visit URL"
                         href={resultUrl}
                         style={isVisitButtonEnabled ? {} : { visibility: 'hidden' }}
                     />
-                </div> */}
+                </div>
             </>
         );
     }

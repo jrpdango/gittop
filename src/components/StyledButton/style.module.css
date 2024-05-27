@@ -1,0 +1,29 @@
+.styled-button {
+    background-color: var(--color-surface-400);
+    color: var(--color-primary-600);
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 0.8125em;
+    text-decoration: none;
+}
+
+.styled-button:hover {
+    cursor: pointer;
+}
+
+.styled-button:active {
+    background-color: var(--color-surface-mixed-300);
+    color: var(--color-primary-300);
+}
+
+a.styled-button {
+    color: var(--color-primary-600);
+}
+
+.styled-button div {
+    display: flex;
+    align-items: center;
+}
