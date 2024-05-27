@@ -2,6 +2,7 @@ import styles from './style.module.css';
 import { Suspense } from 'react';
 import Loading from '../../components/Loading';
 import ContentContainer from '../../components/ContentContainer';
+import Header from '../../components/Header';
 import { useSearchParams } from 'react-router-dom';
 
 export default function Display() {
@@ -16,7 +17,7 @@ export default function Display() {
     const isRoot = subPaths.currentSegment === '/';
     return (
         <div>
-            {/* <Header subPaths={subPaths} repo={repo} isRoot={isRoot} /> */}
+            <Header subPaths={subPaths} repo={repo} isRoot={isRoot} />
             {/* <Suspense
                 key={path}
                 fallback={ */}
