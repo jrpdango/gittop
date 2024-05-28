@@ -14,7 +14,10 @@ export default function PreviewHeader(props) {
                     href={props.raw}
                     title="Raw"
                 />
-                <a download={props.fileName} href={props.downloadUrl}>Download</a>
+                {
+                    props.fileName && props.downloadUrl &&
+                    <a download={props.fileName} href={props.downloadUrl}>Download</a>
+                }
             </div>
             <div className={styles["raw-info"]}>
                 {/* TODO: Add info on raw link */} 

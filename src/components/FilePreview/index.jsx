@@ -36,7 +36,12 @@ export default function FilePreview({file, extension}) {
     if (imageExtensions.includes(extension) && extension !== 'svg') {
         return (
             <>
-                <PreviewHeader fileSize={file.data.size} raw={file.data.download_url} />
+                <PreviewHeader 
+                    fileSize={file.data.size} 
+                    raw={file.data.download_url} 
+                    fileName={file.data.name}
+                    downloadUrl={`data:image/${extension};base64,${file.data.content}`} 
+                />
                 <ImageViewer alt="Image Preview" src={`data:image/${extension};base64,${file.data.content}`} />
             </>
         );
@@ -85,7 +90,12 @@ export default function FilePreview({file, extension}) {
             const content = decodeContent(file.data.content);
             return (
                 <>
-                    <PreviewHeader fileSize={file.data.size} raw={file.data.download_url}>
+                    <PreviewHeader 
+                        fileSize={file.data.size} 
+                        raw={file.data.download_url}
+                        fileName={file.data.name}
+                        downloadUrl={`data:text/plain;charset=utf-8,${encodeURIComponent(content)}`} 
+                    >
                         { previewSwitch }
                         <span>&nbsp;·&nbsp;</span>
                     </PreviewHeader>
