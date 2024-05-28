@@ -41,10 +41,7 @@ export default function ImageViewer({src, alt}) {
         }
         {
             hasError &&
-            <MessageBlock 
-                title="Whoops."
-                message="Can't seem to load that. Try checking if it really is an image or reloading this later."
-            />
+            <MessageBlock title="🤔" message="Can't seem to preview this file. Try downloading it instead." />
         }
         </>
     );
