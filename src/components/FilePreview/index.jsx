@@ -47,9 +47,9 @@ export default function FilePreview({file, extension}) {
             return (
                 <>
                     <PreviewHeader fileSize={file.data.size} raw={file.data.download_url} />
-                    <object className={styles["pdf-viewer"]} type="application/pdf" data={`http://mozilla.github.io/pdf.js/web/viewer.html?file=${file.data.download_url}`} width="100%">
+                    <iframe className={styles["pdf-viewer"]} src={`data:application/pdf;base64,${file.data.content}`} width="100%">
                         <p className={styles["pdf-fail"]}>Can&apos;t seem to preview the PDF. Try downloading it directly.</p>
-                    </object>
+                    </iframe>
                 </>
                 
             );
