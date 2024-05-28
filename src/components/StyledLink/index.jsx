@@ -1,18 +1,21 @@
+import { Link } from 'react-router-dom';
 import styles from '../../styles/button-style.module.css';
 
-export default function NewStyledButton({
+export default function StyledLink({
     title,
     leading,
     className = '',
     style = {},
-    onClick = () => { }
+    href = '#',
+    target = '_blank',
 }) {
     return (
-        <button
-            type="button"
+        <Link
+            to={href}
             className={`${styles["styled-button"]} ${className}`}
             style={style}
-            onClick={onClick}
+            target={target}
+            rel={target === '_blank' ? 'noopener noreferrer' : ''}
         >
             {
                 leading ?
@@ -24,6 +27,6 @@ export default function NewStyledButton({
                     :
                     title
             }
-        </button>
+        </Link>
     );
 }
