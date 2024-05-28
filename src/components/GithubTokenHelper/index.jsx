@@ -6,7 +6,6 @@ export default function GithubTokenHelper({onBack = () => {}}) {
         <>
             <div className={styles["back-button"]}>
                 <StyledButton
-                    type="button"
                     title="Back"
                     leading={
                         <img

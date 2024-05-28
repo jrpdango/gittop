@@ -1,4 +1,4 @@
-import StyledButton from '../StyledButton';
+import StyledLink from '../StyledLink';
 import styles from './style.module.css';
 
 export default function PreviewHeader(props) {
@@ -9,11 +9,7 @@ export default function PreviewHeader(props) {
                     {props.children}
                     <span>{formatBytes(props.fileSize)}</span>
                 </div>
-                <StyledButton
-                    type="link"
-                    href={props.raw}
-                    title="Raw"
-                />
+                <StyledLink href={props.raw} title="Raw" />
                 {
                     props.fileName && props.downloadUrl &&
                     <a download={props.fileName} href={props.downloadUrl}>Download</a>

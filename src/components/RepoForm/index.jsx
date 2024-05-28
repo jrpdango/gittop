@@ -4,6 +4,7 @@ import TextField from '../../components/TextField';
 import { encrypt } from '../../utils/tokenCrypto';
 import StyledButton from '../StyledButton';
 import GithubTokenHelper from '../GithubTokenHelper';
+import StyledLink from '../StyledLink';
 
 export default function RepoForm() {
     const [currentUrl, setCurrentUrl] = useState('');
@@ -42,7 +43,6 @@ export default function RepoForm() {
                     />
                 </form>
                 <StyledButton
-                    type="button"
                     title="Generate URL"
                     onClick={async () => {
                         if (!(repo && githubToken)) {
@@ -72,8 +72,7 @@ export default function RepoForm() {
                     />
                 </div>
                 <div>
-                    <StyledButton
-                        type="link"
+                    <StyledLink
                         title="Visit URL"
                         href={resultUrl}
                         style={isVisitButtonEnabled ? {} : { visibility: 'hidden' }}

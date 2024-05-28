@@ -33,7 +33,6 @@ export default function Header({subPaths, repo, isRoot}) {
                 {isRoot ? repo : subPaths.currentSegment}
             </div>
             <StyledButton 
-                type="button"
                 title="Top"
                 className={ scrollOffset > 0 ? '' : 'hidden' }
                 leading={

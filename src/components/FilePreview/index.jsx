@@ -133,7 +133,6 @@ export default function FilePreview({file, extension}) {
                         />
                     <MessageBlock message="This file may not be displayed correctly.">
                         <StyledButton
-                            type="button"
                             title="View anyway"
                             style={{ marginTop: '16px', paddingLeft: '32px', paddingRight: '32px' }}
                             onClick={() => { setShowRaw(true) }}
