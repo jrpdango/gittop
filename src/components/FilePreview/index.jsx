@@ -113,20 +113,33 @@ export default function FilePreview({file, extension}) {
             if (showRaw) {
                 return (
                     <>
-                        <PreviewHeader fileSize={file.data.size} raw={file.data.download_url} />
+                        <PreviewHeader 
+                            fileSize={file.data.size} 
+                            raw={file.data.download_url} 
+                            fileName={file.data.name}
+                            downloadUrl={`data:application/octet-stream;base64,${file.data.content}`} 
+                        />
                         <CodeViewer content={content} extension={extension} shouldRenderContent={shouldRenderContent} />
                     </>
                 );
             }
             return (
-                <MessageBlock message="This file may not be displayed correctly.">
-                    <StyledButton 
-                        type="button" 
-                        title="View anyway"
-                        style={{ marginTop: '16px', paddingLeft: '32px', paddingRight: '32px' }}
-                        onClick={() => { setShowRaw(true) }}
-                    />
-                </MessageBlock>
+                <>
+                    <PreviewHeader 
+                            fileSize={file.data.size} 
+                            raw={file.data.download_url} 
+                            fileName={file.data.name}
+                            downloadUrl={`data:application/octet-stream;base64,${file.data.content}`} 
+                        />
+                    <MessageBlock message="This file may not be displayed correctly.">
+                        <StyledButton
+                            type="button"
+                            title="View anyway"
+                            style={{ marginTop: '16px', paddingLeft: '32px', paddingRight: '32px' }}
+                            onClick={() => { setShowRaw(true) }}
+                        />
+                    </MessageBlock>
+                </>
             );
         }
     }
