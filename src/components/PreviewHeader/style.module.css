@@ -13,16 +13,6 @@
     align-items: center;
 }
 
-.raw-info {
-    background-color: var(--color-surface-200);
-    color: var(--color-surface-600);
-    text-align: end;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding-bottom: 4px;
-    font-size: 0.8em;
-}
-
 .spacer {
     width: 8px;
 }

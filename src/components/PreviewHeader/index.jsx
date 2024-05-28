@@ -14,6 +14,14 @@ export default function PreviewHeader(props) {
                     title='Download'
                     download={props.fileName}
                     href={props.downloadUrl}
+                    leading={
+                        <img
+                            src="/download-icon.svg"
+                            alt="Download Icon"
+                            height='16px'
+                            width='16px'
+                        />
+                    }
                 />
             </div>
         </>
