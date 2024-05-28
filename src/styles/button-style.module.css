@@ -1,9 +1,7 @@
 .styled-button {
     background-color: var(--color-surface-400);
     color: var(--color-primary-600);
-    padding: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
     border-radius: 8px;
     border: 0;
     font-size: 0.8125em;

@@ -10,22 +10,11 @@ export default function PreviewHeader(props) {
                     {props.children}
                     <span>{formatBytes(props.fileSize)}</span>
                 </div>
-                <div>
-                    <StyledLink href={props.raw} title="Raw" />
-                    <div className={styles.spacer}></div>
-                    {
-                        props.fileName && props.downloadUrl &&
-                        <StyledAnchor
-                            title='Download'
-                            download={props.fileName}
-                            href={props.downloadUrl}
-                        />
-                    }
-                </div>
-            </div>
-            <div className={styles["raw-info"]}>
-                {/* TODO: Add info on raw link */} 
-                Raw links have a short lifespan. Try refreshing the page if it leads you to a 404.
+                <StyledAnchor
+                    title='Download'
+                    download={props.fileName}
+                    href={props.downloadUrl}
+                />
             </div>
         </>
     );
