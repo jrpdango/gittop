@@ -46,7 +46,12 @@ export default function FilePreview({file, extension}) {
         case 'pdf': {
             return (
                 <>
-                    <PreviewHeader fileSize={file.data.size} raw={file.data.download_url} downloadUrl={`data:application/pdf;base64,${file.data.content}`} />
+                    <PreviewHeader 
+                        fileSize={file.data.size} 
+                        raw={file.data.download_url} 
+                        fileName={file.data.name}
+                        downloadUrl={`data:application/pdf;base64,${file.data.content}`} 
+                    />
                     <iframe className={styles["pdf-viewer"]} src={`data:application/pdf;base64,${file.data.content}`} width="100%">
                         <p className={styles["pdf-fail"]}>Can&apos;t seem to preview the PDF. Try downloading it directly.</p>
                     </iframe>
@@ -58,7 +63,12 @@ export default function FilePreview({file, extension}) {
             const content = decodeContent(file.data.content);
             return (
                 <>
-                    <PreviewHeader fileSize={file.data.size} raw={file.data.download_url}>
+                    <PreviewHeader 
+                        fileSize={file.data.size} 
+                        raw={file.data.download_url}
+                        fileName={file.data.name}
+                        downloadUrl={`data:image/svg+xml;base64,${file.data.content}`} 
+                    >
                         { previewSwitch }
                         <span>&nbsp;·&nbsp;</span>
                     </PreviewHeader>
