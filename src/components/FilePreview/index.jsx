@@ -7,11 +7,9 @@ import { decodeContent } from '../../utils/decodeContent';
 import CodeViewer from '../CodeViewer';
 import PreviewHeader from '../PreviewHeader';
 import MessageBlock from '../MessageBlock';
-import StyledButton from '../StyledButton';
 
 export default function FilePreview({file, extension}) {
     const [showPreview, setShowPreview] = useState(previewRenderables.includes(extension));
-    const [showRaw, setShowRaw] = useState(textExtensions.includes(extension));
     const [shouldRenderContent, setShouldRenderContent] = useState(false);
     const previewSwitch = (
         <div className={styles["preview-code-switch"]}>
@@ -66,6 +64,20 @@ export default function FilePreview({file, extension}) {
         }
         case 'svg': {
             const content = decodeContent(file.data.content);
+            // If text has an invalid character, don't display it
+            if (content.includes('\ufffd')) {
+                return (
+                    <>
+                        <PreviewHeader
+                            fileSize={file.data.size}
+                            raw={file.data.download_url}
+                            fileName={file.data.name}
+                            downloadUrl={`data:image/svg+xml;base64,${file.data.content}`}
+                        />
+                        <MessageBlock title="🤔" message="Can't seem to preview this file. Try downloading it instead." />
+                    </>
+                );
+            }
             return (
                 <>
                     <PreviewHeader 
@@ -88,6 +100,20 @@ export default function FilePreview({file, extension}) {
         }    
         case 'md': {
             const content = decodeContent(file.data.content);
+            // If text has an invalid character, don't display it
+            if (content.includes('\ufffd')) {
+                return (
+                    <>
+                        <PreviewHeader
+                            fileSize={file.data.size}
+                            raw={file.data.download_url}
+                            fileName={file.data.name}
+                            downloadUrl={`data:text/plain;charset=utf-8,${encodeURIComponent(content)}`}
+                        />
+                        <MessageBlock title="🤔" message="Can't seem to preview this file. Try downloading it instead." />
+                    </>
+                );
+            }
             return (
                 <>
                     <PreviewHeader 
@@ -110,34 +136,27 @@ export default function FilePreview({file, extension}) {
         }  
         default: {
             const content = decodeContent(file.data.content);
-            if (showRaw) {
+            const header = (
+                <PreviewHeader
+                    fileSize={file.data.size}
+                    raw={file.data.download_url}
+                    fileName={file.data.name}
+                    downloadUrl={`data:application/octet-stream;base64,${file.data.content}`}
+                />
+            );
+            // If text has an invalid character, don't display it
+            if (content.includes('\ufffd')) {
                 return (
                     <>
-                        <PreviewHeader 
-                            fileSize={file.data.size} 
-                            raw={file.data.download_url} 
-                            fileName={file.data.name}
-                            downloadUrl={`data:application/octet-stream;base64,${file.data.content}`} 
-                        />
-                        <CodeViewer content={content} extension={extension} shouldRenderContent={shouldRenderContent} />
+                        { header }
+                        <MessageBlock title="🤔" message="Can't seem to preview this file. Try downloading it instead." />
                     </>
                 );
             }
             return (
                 <>
-                    <PreviewHeader 
-                            fileSize={file.data.size} 
-                            raw={file.data.download_url} 
-                            fileName={file.data.name}
-                            downloadUrl={`data:application/octet-stream;base64,${file.data.content}`} 
-                        />
-                    <MessageBlock message="This file may not be displayed correctly.">
-                        <StyledButton
-                            title="View anyway"
-                            style={{ marginTop: '16px', paddingLeft: '32px', paddingRight: '32px' }}
-                            onClick={() => { setShowRaw(true) }}
-                        />
-                    </MessageBlock>
+                    { header }
+                    <CodeViewer content={content} extension={extension} shouldRenderContent={shouldRenderContent} />
                 </>
             );
         }
