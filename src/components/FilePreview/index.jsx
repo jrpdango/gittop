@@ -1,7 +1,7 @@
 import styles from './style.module.css';
 import { useState, useEffect } from 'react';
 import MarkdownParser from '../MarkdownParser';
-import { imageExtensions, previewRenderables, textExtensions } from '../../constants/extensions';
+import { imageExtensions, previewRenderables } from '../../constants/extensions';
 import ImageViewer from '../ImageViewer';
 import { decodeContent } from '../../utils/decodeContent';
 import CodeViewer from '../CodeViewer';
@@ -55,7 +55,7 @@ export default function FilePreview({file, extension}) {
                         fileName={file.data.name}
                         downloadUrl={`data:application/pdf;base64,${file.data.content}`} 
                     />
-                    <iframe className={styles["pdf-viewer"]} src={`data:application/pdf;base64,${file.data.content}`} width="100%">
+                    <iframe className={styles["pdf-viewer"]} src={`data:application/pdf;base64,${file.data.content}`} width="99.5%">
                         <p className={styles["pdf-fail"]}>Can&apos;t seem to preview the PDF. Try downloading it directly.</p>
                     </iframe>
                 </>

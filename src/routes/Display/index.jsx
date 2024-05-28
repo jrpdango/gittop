@@ -30,9 +30,8 @@ export default function Display() {
             </Suspense>
             {
                 extension === 'pdf' ?
-                    <div className={styles["hard-refresh-help"]}>
-                        <span>If the PDF does not load, try <a href="https://filecamp.com/support/problem-solving/hard-refresh/" target="#">hard refreshing</a> this page.</span>
-                        <span>&nbsp;Otherwise, your file may be invalid.</span>
+                    <div className={styles["pdf-help"]}>
+                        <span>If the PDF does not load, try refreshing this page or checking if your file is valid.</span>
                     </div>
                     : <></>
             }

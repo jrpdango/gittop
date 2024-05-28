@@ -1,0 +1,12 @@
+.pdf-help {
+    color: var(--color-primary-500);
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 8px;
+}
+
+.pdf-help span {
+    text-align: center;
+}
