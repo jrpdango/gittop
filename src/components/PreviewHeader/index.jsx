@@ -1,4 +1,5 @@
 import StyledLink from '../StyledLink';
+import StyledAnchor from '../StyledAnchor';
 import styles from './style.module.css';
 
 export default function PreviewHeader(props) {
@@ -9,11 +10,18 @@ export default function PreviewHeader(props) {
                     {props.children}
                     <span>{formatBytes(props.fileSize)}</span>
                 </div>
-                <StyledLink href={props.raw} title="Raw" />
-                {
-                    props.fileName && props.downloadUrl &&
-                    <a download={props.fileName} href={props.downloadUrl}>Download</a>
-                }
+                <div>
+                    <StyledLink href={props.raw} title="Raw" />
+                    <div className={styles.spacer}></div>
+                    {
+                        props.fileName && props.downloadUrl &&
+                        <StyledAnchor
+                            title='Download'
+                            download={props.fileName}
+                            href={props.downloadUrl}
+                        />
+                    }
+                </div>
             </div>
             <div className={styles["raw-info"]}>
                 {/* TODO: Add info on raw link */} 
