@@ -19,6 +19,10 @@
     color: red;
 }
 
+.logo {
+    margin-bottom: 24px;
+}
+
 .help,
 .help:visited {
     color: lightskyblue;

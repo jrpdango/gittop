@@ -24,6 +24,13 @@ export default function RepoForm() {
     } else {
         return (
             <>
+                <img 
+                    src="/gittop-logo.png" 
+                    className={styles.logo}
+                    height="50" 
+                    width="50"
+                    alt="Gittop"
+                />
                 <form className={styles["textfield-column"]} action="">
                     <TextField
                         title="Repository URL"

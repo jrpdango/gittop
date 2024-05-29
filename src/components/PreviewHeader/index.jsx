@@ -18,8 +18,8 @@ export default function PreviewHeader(props) {
                         <img
                             src="/download-icon.svg"
                             alt="Download Icon"
-                            height='16px'
-                            width='16px'
+                            height="16"
+                            width="16"
                         />
                     }
                 />
