@@ -36,7 +36,6 @@ export default function FilePreview({file, extension}) {
             <>
                 <PreviewHeader 
                     fileSize={file.data.size} 
-                    raw={file.data.download_url} 
                     fileName={file.data.name}
                     downloadUrl={`data:image/${extension};base64,${file.data.content}`} 
                 />
@@ -51,7 +50,6 @@ export default function FilePreview({file, extension}) {
                 <>
                     <PreviewHeader 
                         fileSize={file.data.size} 
-                        raw={file.data.download_url} 
                         fileName={file.data.name}
                         downloadUrl={`data:application/pdf;base64,${file.data.content}`} 
                     />
@@ -70,7 +68,6 @@ export default function FilePreview({file, extension}) {
                     <>
                         <PreviewHeader
                             fileSize={file.data.size}
-                            raw={file.data.download_url}
                             fileName={file.data.name}
                             downloadUrl={`data:image/svg+xml;base64,${file.data.content}`}
                         />
@@ -82,7 +79,6 @@ export default function FilePreview({file, extension}) {
                 <>
                     <PreviewHeader 
                         fileSize={file.data.size} 
-                        raw={file.data.download_url}
                         fileName={file.data.name}
                         downloadUrl={`data:image/svg+xml;base64,${file.data.content}`} 
                     >
@@ -106,7 +102,6 @@ export default function FilePreview({file, extension}) {
                     <>
                         <PreviewHeader
                             fileSize={file.data.size}
-                            raw={file.data.download_url}
                             fileName={file.data.name}
                             downloadUrl={`data:text/plain;charset=utf-8,${encodeURIComponent(content)}`}
                         />
@@ -118,7 +113,6 @@ export default function FilePreview({file, extension}) {
                 <>
                     <PreviewHeader 
                         fileSize={file.data.size} 
-                        raw={file.data.download_url}
                         fileName={file.data.name}
                         downloadUrl={`data:text/plain;charset=utf-8,${encodeURIComponent(content)}`} 
                     >
@@ -139,7 +133,6 @@ export default function FilePreview({file, extension}) {
             const header = (
                 <PreviewHeader
                     fileSize={file.data.size}
-                    raw={file.data.download_url}
                     fileName={file.data.name}
                     downloadUrl={`data:application/octet-stream;base64,${file.data.content}`}
                 />
