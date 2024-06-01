@@ -19,11 +19,12 @@ While this project is mainly focused on sharing private repos with others, it ca
 
 ## How to use
 
-1. Get the URL of the repository you want to view.
-2. Get a [personal access token](#how-do-i-get-my-github-personal-access-token) (preferably fine-grained, read-only, and only scoped to that specific repo).
-3. Go to the site and input both in their appropriate fields.
-4. Click "Generate URL". If done correctly, a new URL should appear in the bottom field.
-5. Copy the generated URL or click the "Visit URL" button to view the repo.
+1. Open up Gittop.
+2. Get the URL of the repository you want to view.
+3. Get a [personal access token](#how-do-i-get-my-github-personal-access-token) (preferably fine-grained, read-only, and only scoped to that specific repo).
+4. Go to the site and input both in their appropriate fields.
+5. Click "Generate URL". If done correctly, a new URL should appear in the bottom field.
+6. Copy the generated URL or click the "Visit URL" button to view the repo.
 
 The URL you generated can be shared with whomever you choose, but please note that while your token is encrypted in URL, it is still there and can be decoded. See [About Generated URLs](#about-generated-urls) below.
 
