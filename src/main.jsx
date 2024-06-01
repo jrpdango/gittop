@@ -13,11 +13,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorMessage />
   },
   {
-    path: import.meta.env.BASE_URL + 'display',
+    path: 'display',
     element: <Display />,
     errorElement: <ErrorMessage />
   }
-]);
+], {
+  basename: import.meta.env.BASE_URL
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
