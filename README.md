@@ -62,7 +62,7 @@ URLs you generate have parameters that allow Gittop to display your private repo
 
 ## License
 
-<pre style="text-align: center;">
+<pre align="center">
 Copyright © 2024 Jasper Robert Pigason
 
 Licensed under the Apache License, Version 2.0 (the "License");
