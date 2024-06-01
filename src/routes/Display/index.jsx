@@ -5,6 +5,7 @@ import ContentContainer from '../../components/ContentContainer';
 import Header from '../../components/Header';
 import ContentBody from '../../components/ContentBody';
 import { useSearchParams } from 'react-router-dom';
+import ErrorMessage from '../../components/ErrorMessage';
 
 export default function Display() {
     const [searchParams, _] = useSearchParams();
@@ -16,6 +17,11 @@ export default function Display() {
 
     const subPaths = determineSubPaths({ owner, repo, token, path });
     const isRoot = subPaths.currentSegment === '/';
+
+    if([owner, repo, token].includes(undefined || null)) {
+        return <ErrorMessage title="Whoops." message="Owner, repo, or token may have not been provided. Try checking again." />;
+    }
+
     return (
         <div>
             <Header subPaths={subPaths} repo={repo} isRoot={isRoot} />

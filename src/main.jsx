@@ -4,15 +4,18 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Display from './routes/Display/index.jsx';
 import Root from './routes/Root/index.jsx';
+import ErrorMessage from './components/ErrorMessage/index.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />
+    element: <Root />,
+    errorElement: <ErrorMessage />
   },
   {
     path: '/display',
-    element: <Display />
+    element: <Display />,
+    errorElement: <ErrorMessage />
   }
 ]);
 
