@@ -8,7 +8,7 @@ import ErrorMessage from './components/ErrorMessage/index.jsx';
 
 const router = createBrowserRouter([
   {
-    path: import.meta.env.BASE_URL,
+    path: "/",
     element: <Root />,
     errorElement: <ErrorMessage />
   },
