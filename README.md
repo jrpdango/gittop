@@ -59,3 +59,21 @@ Gittop never hosts your files, as the app only pulls data from GitHub itself. <b
 #### About Generated URLs
 
 URLs you generate have parameters that allow Gittop to display your private repos. One of these is an encrypted string that represents your access token. **Please only share your URL with people you trust.** As long as you only provide that token read access to a repo, it should be fine even in the case of a compromise.
+
+## License
+
+<pre style="text-align: center;">
+Copyright © 2024 Jasper Robert Pigason
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre>
