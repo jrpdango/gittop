@@ -6,6 +6,7 @@ import Display from './routes/Display/index.jsx';
 import Root from './routes/Root/index.jsx';
 import ErrorMessage from './components/ErrorMessage/index.jsx';
 
+console.log(import.meta.env.BASE_URL);
 const router = createBrowserRouter([
   {
     path: '/',

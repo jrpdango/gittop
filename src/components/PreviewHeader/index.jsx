@@ -16,7 +16,7 @@ export default function PreviewHeader(props) {
                     href={props.downloadUrl}
                     leading={
                         <img
-                            src="/download-icon.svg"
+                            src={import.meta.env.BASE_URL + "download-icon.svg"}
                             alt="Download Icon"
                             height="16"
                             width="16"

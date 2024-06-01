@@ -5,7 +5,7 @@ export default function RepoItem({ item = {}, onClick = () => {} }) {
         <div className={styles.row} onClick={onClick}>
             <img
                 // If the current item is a directory, show the folder icon, else, show the file icon
-                src={item?.type === 'dir' ? '/folder-icon.svg' : '/file-icon.svg'}
+                src={item?.type === 'dir' ? import.meta.env.BASE_URL + 'folder-icon.svg' : import.meta.env.BASE_URL + 'file-icon.svg'}
                 className={styles.icon}
                 alt="Repo Item"
             />

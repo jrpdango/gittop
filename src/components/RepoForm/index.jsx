@@ -25,7 +25,7 @@ export default function RepoForm() {
         return (
             <>
                 <img 
-                    src="/gittop-logo.png" 
+                    src={ import.meta.env.BASE_URL + "gittop-logo.png" }
                     className={styles.logo}
                     height="50" 
                     width="50"

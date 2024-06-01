@@ -9,7 +9,7 @@ export default function GithubTokenHelper({onBack = () => {}}) {
                     title="Back"
                     leading={
                         <img
-                            src="/up-arrow.svg"
+                            src={import.meta.env.BASE_URL + "up-arrow.svg"}
                             alt="Left arrow icon"
                             style={{ height: '16px', width: '16px', transform: 'rotate(270deg)' }}
                         />

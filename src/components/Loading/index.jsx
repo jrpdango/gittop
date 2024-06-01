@@ -17,7 +17,7 @@ export default function Loading() {
         >
             <img
                 className={styles.icon}
-                src="/gittop-logo.png"
+                src={import.meta.env.BASE_URL + "gittop-logo.png"}
                 alt="loading"
             />
             {
