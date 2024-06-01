@@ -10,7 +10,7 @@ export default function ErrorMessage({ title = 'Whoops.', message }) {
         <div className={styles['error-message']}>
             <StyledLink
                 title="Back to Home"
-                href={import.meta.env.BASE_URL}
+                href="/"
                 leading={
                     <img
                         src={import.meta.env.BASE_URL + "up-arrow.svg"}
