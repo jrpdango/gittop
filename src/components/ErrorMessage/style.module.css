@@ -1,0 +1,9 @@
+.back {
+    width: fit-content;
+    margin: 16px 0 8px 32px;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+}

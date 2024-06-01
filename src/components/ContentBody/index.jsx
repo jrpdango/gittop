@@ -1,13 +1,13 @@
 import ContentTree from '../ContentTree';
 import FilePreview from '../FilePreview';
 import { Octokit } from 'octokit';
-import MessageBlock from '../MessageBlock';
 import MarkdownParser from '../MarkdownParser';
 import ContentContainer from '../ContentContainer';
 import Loading from '../Loading';
 import { decrypt } from '../../utils/tokenCrypto';
 import { decodeContent } from '../../utils/decodeContent';
 import { useState, useEffect, useRef } from 'react';
+import ErrorMessage from '../ErrorMessage';
 
 const octokit = new Octokit();
 
@@ -64,11 +64,8 @@ export default function ContentBody({owner, repo, token, path, headerTitle}) {
                     );
                 }
             } catch(e) {
-                console.error(e);
                 setDisplayedElement(
-                    <ContentContainer>
-                        <MessageBlock title="Uh oh!" message={"That URL seems to be invalid. Maybe there's a typo in there or your token's expired?"} />
-                    </ContentContainer>
+                    <ErrorMessage title="Uh oh!" message="That URL seems to be invalid. Maybe there's a typo in there or your token's expired?" />
                 );
             }
         }

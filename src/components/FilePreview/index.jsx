@@ -26,7 +26,7 @@ export default function FilePreview({file, extension}) {
         return (
             <MessageBlock
                 title="Hmmm."
-                message="This might be a nested Git repo, which we can't view here." 
+                message="This might be a Git submodule, which we can't view here. Sorry about that." 
             />
         );
     }
