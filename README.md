@@ -12,6 +12,8 @@ While this project is mainly focused on sharing private repos with others, it ca
 
 This is a [private repository](https://github.com/jrpdango/gittop-demo) that you can view through the link above.
 
+Try it yourself [here](https://jrpdango.github.io/gittop/)!
+
 ## Features
 
 - Preview public and private GitHub repositories
