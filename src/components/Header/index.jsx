@@ -18,6 +18,14 @@ export default function Header({subPaths, repo, isRoot}) {
     return (
         <div className={styles.header}>
             <div className={styles["path-links"]}>
+                <a href={import.meta.env.BASE_URL}>
+                    <img 
+                        src={import.meta.env.BASE_URL + "gittop-logo.png"} 
+                        className={styles.logo} 
+                        height={30} 
+                        width={30} 
+                    />
+                </a>
                 {
                     !isRoot ?
                         subPaths.paths.map((subPath) => (

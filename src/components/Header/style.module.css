@@ -15,9 +15,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 32px 0 0;
+    align-items: center;
 }
 
 .path-link:link,
 .path-link:visited {
     color: lightskyblue;
+}
+
+.logo {
+    margin-right: 16px;
 }
