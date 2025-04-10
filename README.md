@@ -8,7 +8,7 @@ While this project is mainly focused on sharing private repos with others, it ca
 
 ## Demo
 
-[Link to demo](https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=wooyEsK5JWrChsKfwpLDqMK4w4zDiCpew6fDgSjDr2DDlsOeJsK6Ix0Awq85w4l-FU3Cq8KKRgTDuy56w749LC7CnsO-wq09M8OGeiczCnHDujcNwqfDvWjDucO_fH_Cq8O2wrXCiMO9DWrDksKkHT3CmsKfdMOMFMKRwojDm8OAWWMdfsKLVsOaAMKxBkwYwrt7w5oeelPCgC7Cn17Cq8O9AyTDtsKMw6JZwpVxXsKFfcOv)
+[Link to demo](https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=QMO_wqrCr3YuZXXDsGxQKwfCrsOhwozCl8OSw6Z3wo3CisKCwqbDvMO4KjvDtRDDu8KHwo_CvcKTw7XCv1LDusOjw7REZWvDrsOQLcOZwpJdw6tWRxIVw5EKw6nDmiYjwpXDrsOcw7nCkCnCncOmwrB9w7DCuMKpw4LCoALCtUDCk8ODFMO_WyTCuMOFXnfDlWdIw73Dg8K2CsOxQFfCvmPCq8KIw7rCtFlSw4cGGMKhwqjDk0pKwopCVh8SdA)
 
 This is a [private repository](https://github.com/jrpdango/gittop-demo) that you can view through the link above.
 
