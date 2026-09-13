@@ -1,6 +1,6 @@
 # Gittop
 
-![Gittop Banner](https://jrpdango.github.io/gittop/gittop-full-transparent.png)
+![Gittop Banner](https://jrpdango.github.io/gittop/gittop-full-transparent.webp)
 
 A read-only viewer for the most recent state of the default branch of a GitHub repository. It allows you to share personal repos without having to make them public.
 
